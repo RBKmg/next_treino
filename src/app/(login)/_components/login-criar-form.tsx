@@ -23,7 +23,7 @@ function FormButton() {
     return (
         <>
             {pending ? (
-                <Button disabled={pending}>Enviando...</Button>
+                <Button disabled={pending}>Cadastrando...</Button>
             ) : (
                 <Button>Cadastrar</Button>
             )}

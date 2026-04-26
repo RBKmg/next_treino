@@ -19,8 +19,10 @@ function getTitle(pathname: string) {
     switch (pathname) {
         case '/conta/postar':
             return 'Poste Sua Foto';
+
         case '/conta/estatisticas':
             return 'Estatísticas';
+
         default:
             return 'Minha Conta';
     }
@@ -51,6 +53,7 @@ export default function ContaHeader() {
     return (
         <header className={styles.header}>
             <h1 className="title">{getTitle(pathname)}</h1>
+
             {mobile && (
                 <button aria-label="Menu" className={
                     `${styles.mobileButton} ${mobileMenu ? styles.mobileButtonActive : ''}`

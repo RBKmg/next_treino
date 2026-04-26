@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
 
-  const result = await usuarioLogado();
-  const dadosUsuarioContexto = result.ok ? result.dadosUsuario : null;
+  const usuarioContexto = await usuarioLogado();
+  const dadosUsuarioContexto = usuarioContexto.ok ? usuarioContexto.dadosUsuario : null;
 
   return (
     <html lang="pt-BR">

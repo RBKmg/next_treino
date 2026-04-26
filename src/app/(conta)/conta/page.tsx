@@ -1,19 +1,15 @@
-'use client'
+import { Metadata } from "next";
 
-import { useTokenUsuario } from "@/app/(compartilhado)/_context/provedor-contexto-usuario";
+export const metadata: Metadata = {
+    title: 'Minha conta',
+}
 
 export default function ContaPage() {
-    const dadosUsuarioContexto = useTokenUsuario();
-
-    if (!dadosUsuarioContexto) {
-        return null;
-    }
-    console.log(dadosUsuarioContexto);
 
     return (
-        <main>
-            <h1 onClick={() => console.log('teste')}>Conta: {dadosUsuarioContexto?.usuario?.nome}</h1>
-        </main>
+        <div>
+            <h1>Minha conta</h1>
+        </div>
     )
 }
 

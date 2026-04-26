@@ -1,7 +1,7 @@
 'use client';
 
-import { Usuario } from '@/app/(login)/_services/usuario-logado';
 import React from 'react';
+import { Usuario } from '@/app/(login)/_services/usuario-logado';
 
 
 type IUsuarioContext = {
@@ -20,7 +20,9 @@ export const useTokenUsuario = () => {
     return contexto;
 }
 
-export function ProvedorContextoUsuario({ children, usuario }: { children: React.ReactNode; usuario: Usuario | null }) {
+export function ProvedorContextoUsuario(
+    { children, usuario }: { children: React.ReactNode; usuario: Usuario | null }) {
+
     const [estadoUsuario, setUsuario] = React.useState<Usuario | null>(usuario);
 
     return (

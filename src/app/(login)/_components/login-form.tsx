@@ -45,7 +45,7 @@ export default function LoginForm() {
 
     }, [retornoAction.ok]);
 
-    const usuario = useTokenUsuario();
+    const usuario = useTokenUsuario(); // !!! TESTE PARA VER QUE APOS LOGOUT, AINDA CONTINUA NO PROVEDOR
 
     return (
         <>

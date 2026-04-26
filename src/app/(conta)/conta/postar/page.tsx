@@ -1,8 +1,17 @@
+import { Metadata } from "next"
+import ContaPhotoPost from "../../_components/conta-photo-post";
+
+export const metadata: Metadata = {
+    title: 'Postar | Minha Conta'
+}
+
+export const runtime = 'edge';
+
 export default async function PostarPage() {
 
     return (
         <main>
-            <h1>Postar</h1>
+            <ContaPhotoPost />
         </main>
     )
 }
