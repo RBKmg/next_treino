@@ -1,5 +1,5 @@
 import Feed from "@/(components)/_feed/feed";
-import photosGet from "@/actions/photos-get";
+import photosGet from "@/(components)/_service/photos-get";
 
 export default async function Home() {
   const data = await photosGet();

@@ -9,6 +9,7 @@ import Button from "./_button/button";
 import Input from "./_input/input";
 import ErrorMessage from "./error-messages";
 import styles from './login-form.module.css';
+import { useTokenUsuario } from "@/app/(compartilhado)/_context/provedor-contexto-usuario";
 
 
 
@@ -44,8 +45,11 @@ export default function LoginForm() {
 
     }, [retornoAction.ok]);
 
+    const usuario = useTokenUsuario();
+
     return (
         <>
+            {usuario.usuario?.email}
             <form action={action} className={styles.form}>
                 <Input label="Usuário" name="username" type="text" />
                 <Input label="Senha" name="password" type="password" />

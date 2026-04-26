@@ -3,8 +3,8 @@
 import { cookies } from "next/headers";
 
 import { LoginState } from "@/app/(login)/_components/login-form";
-import { TOKEN_POST } from "@/functions/api";
-import ApiError from "@/functions/api-error";
+import { TOKEN_POST } from "@/app/(compartilhado)/_functions/api";
+import ApiError from "@/app/(compartilhado)/_functions/api-error";
 
 export default async function login(prevState: LoginState, formData: FormData): Promise<LoginState> {
 

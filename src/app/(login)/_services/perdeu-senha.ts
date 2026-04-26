@@ -1,8 +1,8 @@
 'use server'
 
 import { LoginState } from "@/app/(login)/_components/login-form";
-import { PASSWORD_LOST } from "@/functions/api";
-import ApiError from "@/functions/api-error";
+import { PASSWORD_LOST } from "@/app/(compartilhado)/_functions/api";
+import ApiError from "@/app/(compartilhado)/_functions/api-error";
 
 export default async function perdeuSenha(prevState: LoginState, formData: FormData): Promise<LoginState> {
 

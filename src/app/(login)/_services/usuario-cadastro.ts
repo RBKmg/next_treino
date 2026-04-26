@@ -1,8 +1,8 @@
 'use server'
 
 import { LoginState } from "@/app/(login)/_components/login-form";
-import { USER_POST } from "@/functions/api";
-import ApiError from "@/functions/api-error";
+import { USER_POST } from "@/app/(compartilhado)/_functions/api";
+import ApiError from "@/app/(compartilhado)/_functions/api-error";
 import login from "./login";
 
 export default async function usuarioCadastro(prevState: LoginState, formData: FormData): Promise<LoginState> {

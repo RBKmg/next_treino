@@ -1,10 +1,9 @@
 'use client'
 
-import { useUsuario } from "@/context/provedor-contexto-usuario";
-
+import { useTokenUsuario } from "@/app/(compartilhado)/_context/provedor-contexto-usuario";
 
 export default function ContaPage() {
-    const dadosUsuarioContexto = useUsuario();
+    const dadosUsuarioContexto = useTokenUsuario();
 
     if (!dadosUsuarioContexto) {
         return null;

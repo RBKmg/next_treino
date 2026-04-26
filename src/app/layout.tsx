@@ -3,8 +3,8 @@ import "./globals.css";
 
 import Header from "@/(components)/_header/header";
 import Footer from "@/(components)/_footer/footer";
-import { ProvedorContextoUsuario } from "@/context/provedor-contexto-usuario";
-import { type_second } from "@/functions/fonte";
+import { ProvedorContextoUsuario } from "@/app/(compartilhado)/_context/provedor-contexto-usuario";
+import { type_second } from "@/app/(compartilhado)/_functions/fonte";
 import usuarioLogado from "./(login)/_services/usuario-logado";
 
 export const metadata: Metadata = {

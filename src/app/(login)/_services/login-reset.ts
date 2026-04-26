@@ -3,8 +3,8 @@
 import { redirect } from "next/navigation";
 
 import { LoginState } from "@/app/(login)/_components/login-form";
-import ApiError from "@/functions/api-error";
-import { PASSWORD_RESET } from "@/functions/api";
+import ApiError from "@/app/(compartilhado)/_functions/api-error";
+import { PASSWORD_RESET } from "@/app/(compartilhado)/_functions/api";
 
 export default async function loginReset(prevState: LoginState, formData: FormData): Promise<LoginState> {
 

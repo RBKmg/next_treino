@@ -9,17 +9,16 @@ type IUsuarioContext = {
     setUsuario: React.Dispatch<React.SetStateAction<Usuario | null>>;
 }
 
-
 const UsuarioContexto = React.createContext<IUsuarioContext | null>(null);
-export const useUsuario = () => {
+
+
+export const useTokenUsuario = () => {
     const contexto = React.useContext(UsuarioContexto);
     if (contexto === null) {
         throw new Error('useContext deve estar dentro do Provider.');
     }
     return contexto;
 }
-
-
 
 export function ProvedorContextoUsuario({ children, usuario }: { children: React.ReactNode; usuario: Usuario | null }) {
     const [estadoUsuario, setUsuario] = React.useState<Usuario | null>(usuario);

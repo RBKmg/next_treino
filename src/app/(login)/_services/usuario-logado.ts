@@ -2,8 +2,8 @@
 
 import { cookies } from "next/headers";
 
-import { USER_GET } from "@/functions/api";
-import ApiError from "@/functions/api-error";
+import { USER_GET } from "@/app/(compartilhado)/_functions/api";
+import ApiError from "@/app/(compartilhado)/_functions/api-error";
 // import { cache } from "react";
 
 
