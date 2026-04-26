@@ -1,0 +1,17 @@
+{
+    "git.enabled": false,
+    "files.exclude": {
+        "node_modules": true,
+        ".vscode": true,
+        ".gitignore": true,
+        "package.json": false,
+        "package-lock.json": true,
+        ".eslintrc*": true,
+        "tsconfig.*": true,
+        "next-env.d.ts": true,
+        "next.config.mjs": true,
+        "README.md": true,
+        "AGENTS.md": true,
+        "CLAUDE.md": true
+    }
+}
