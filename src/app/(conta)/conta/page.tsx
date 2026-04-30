@@ -1,35 +1,40 @@
+import { Metadata } from "next";
+import Link from "next/link";
 
-import FeedFotos from "@/(components)/_feed/feed-fotos";
+import Feed from "@/(components)/_feed/feed";
 import photosGet from "@/(components)/_service/photos-get";
 import usuarioLogado from "@/app/(login)/_services/usuario-logado";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: 'Minha conta',
 }
 
 export default async function ContaPage() {
-    const usuario = await usuarioLogado();
+    const response = await usuarioLogado();
+    const user = response.ok ? response.dadosUsuario : null;
 
-    if (!usuario.ok || !('dadosUsuario' in usuario)) {
-        return <div>Usuário não logado</div>;
-    }
-
-    const response = await photosGet({
-        user: usuario.dadosUsuario.username
-    });
-
-    if (!response.ok || !Array.isArray(response.data)) {
-        return <div>Erro ao carregar fotos</div>;
-    }
-
-    if (response.data.length === 0) {
-        return <div>Não tem nenhuma foto.</div>;
-    }
-
+    const photosResponse = await photosGet({ user: user?.username });
+    const data = photosResponse.ok ? photosResponse.data : [];
     return (
-        <div>
-            <FeedFotos photos={response.data} />
-        </div>
+        <section>
+            {data?.length ? (
+                <Feed photos={data} />
+            ) : (
+                <div>
+                    <p
+                        style={{ color: '#444', fontSize: '1.25rem', marginBottom: '1rem' }}
+                    >
+                        Nenhuma foto encontrada.
+                    </p>
+                    <Link
+                        href={'/conta/postar'}
+                        className="button"
+                        style={{ display: 'inline-block' }}
+                    >
+                        Postar Foto
+                    </Link>
+                </div>
+            )}
+        </section>
     );
 }

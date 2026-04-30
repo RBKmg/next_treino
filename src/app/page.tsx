@@ -1,9 +1,9 @@
 import Feed from "@/(components)/_feed/feed";
-import photosHomeGet from "@/(components)/_service/photos-home-get";
+import photosGet from "@/(components)/_service/photos-get";
 
 export default async function Home() {
-  const { data } = await photosHomeGet();
-
+  const response = await photosGet();
+  const data = response.ok ? response.data : null;
 
   return (
     <section className="container mainContainer">
