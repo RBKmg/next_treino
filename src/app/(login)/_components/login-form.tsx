@@ -5,8 +5,8 @@ import { useFormStatus } from "react-dom";
 import Link from "next/link";
 
 import login from "@/app/(login)/_services/login"
-import Button from "./_button/button";
-import Input from "./_input/input";
+import Button from "../../(compartilhado)/_components/button/button";
+import Input from "../../(compartilhado)/_components/_input/input";
 import ErrorMessage from "./error-messages";
 import styles from './login-form.module.css';
 import { useTokenUsuario } from "@/app/(compartilhado)/_context/provedor-contexto-usuario";

@@ -1,14 +1,14 @@
 import Feed from "@/(components)/_feed/feed";
-import photosGet from "@/(components)/_service/photos-get";
+import photosHomeGet from "@/(components)/_service/photos-home-get";
 
 export default async function Home() {
-  const data = await photosGet();
+  const { data } = await photosHomeGet();
 
 
   return (
     <section className="container mainContainer">
 
-      <Feed photos={data} />
+      {data && <Feed photos={data} />}
 
     </section>
   );

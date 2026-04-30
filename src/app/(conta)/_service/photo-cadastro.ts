@@ -1,12 +1,13 @@
 'use server'
 
 import { cookies } from "next/headers";
+import { revalidateTag } from "next/cache";
+import { redirect } from "next/navigation";
 
 import { LoginState } from "@/app/(login)/_components/login-form";
 import { PHOTO_POST } from "@/app/(compartilhado)/_functions/api";
 import ApiError from "@/app/(compartilhado)/_functions/api-error";
-import { revalidateTag } from "next/cache";
-import { redirect } from "next/navigation";
+
 
 export default async function photoCadastro(prevState: LoginState, formData: FormData): Promise<LoginState> {
 

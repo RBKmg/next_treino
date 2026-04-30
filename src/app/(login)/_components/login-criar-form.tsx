@@ -3,8 +3,8 @@
 import React, { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 
-import Button from "./_button/button";
-import Input from "./_input/input";
+import Button from "../../(compartilhado)/_components/button/button";
+import Input from "../../(compartilhado)/_components/_input/input";
 import ErrorMessage from "./error-messages";
 import styles from './login-form.module.css';
 import usuarioCadastro from "../_services/usuario-cadastro";
