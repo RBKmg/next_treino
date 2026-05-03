@@ -55,16 +55,8 @@ export function COMMENT_POST(id, body) {
   };
 }
 
-export function PHOTO_DELETE(id) {
-  return {
-    url: `${API_URL}/api/photo/${id}`,
-    options: {
-      method: 'DELETE',
-      headers: {
-        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
-      },
-    },
-  };
+export function PHOTO_DELETE(id: string) {
+  return { url: `${API_URL}/api/photo/${id}`, };
 }
 
 export function PASSWORD_LOST() {

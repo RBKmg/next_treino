@@ -7,7 +7,7 @@ import styles from './conta-photo-post.module.css'
 import Button from "@/app/(compartilhado)/_components/button/button";
 import Input from "@/app/(compartilhado)/_components/_input/input";
 import ErrorMessage from "@/app/(login)/_components/error-messages";
-import photoCadastro from "../_service/photo-cadastro";
+import photoCadastro from "../../(foto)/_service/photo-post";
 
 
 export type LoginState = {
