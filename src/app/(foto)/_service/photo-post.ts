@@ -9,7 +9,7 @@ import { PHOTO_POST } from "@/app/(compartilhado)/_functions/api";
 import ApiError from "@/app/(compartilhado)/_functions/api-error";
 
 
-export default async function photoCadastro(prevState: LoginState, formData: FormData): Promise<LoginState> {
+export default async function photoPost(prevState: LoginState, formData: FormData): Promise<LoginState> {
 
     const token = (await cookies()).get('token')?.value;
 
