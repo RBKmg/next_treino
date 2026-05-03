@@ -41,5 +41,4 @@ export default async function photosGet(
     } catch (error) {
         return ApiError(error);
     }
-
 }
